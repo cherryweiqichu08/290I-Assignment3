@@ -1,4 +1,4 @@
-from fastapi import FastAPI, File, UploadFile, HTTPException
+from fastapi import FastAPI, File, UploadFile
 from typing_extensions import Annotated
 import uvicorn
 from utils import *
@@ -16,7 +16,7 @@ async def root():
 
 
 @app.post("/upload_graph_json/")
-async def create_upload_file(file: UploadFile = File(...)):
+async def create_upload_file(file: UploadFile):
     global active_graph
 
     if not file.filename.endswith('.json'):
