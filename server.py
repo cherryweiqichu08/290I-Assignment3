@@ -1,4 +1,3 @@
-pip install fastapi
 from fastapi import FastAPI, File, UploadFile
 import uvicorn
 from utils import create_graph_from_json
